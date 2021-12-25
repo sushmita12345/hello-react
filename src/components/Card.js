@@ -1,6 +1,6 @@
 import React  from "react"
 import star from "../images/star.png"
-import image from "../images/image-1.png"
+// import image from "../images/image-1.png"
 // import wedding from "../images/wedding.png"
 // import mountain from "../images/mountain.png"
 
@@ -17,7 +17,7 @@ export default function Card(props) {
 
         <div className="card">
             {badgeText && <div className="card-badge">{badgeText}</div>}
-            <img src={image} alt="image" className="card-image"/>
+            <img src={require(`../images/${props.item.coverImg}`)} className="card-image"/>
             <div className="card-stats">
                 <img src={star} alt="star" className="card-star"/>
                 <span>{props.item.stats.rating}</span>
